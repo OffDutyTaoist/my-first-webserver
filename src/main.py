@@ -1,12 +1,8 @@
-from textnode import TextNode, TextType
+from copy_static import copy_static_to_public
 
 def main():
-    node = TextNode(
-        "This is some anchor text",
-        TextType.LINK,
-        "https://www.boot.dev"
-    )
-    print(node)
+    # Generate the site by copying all of static/ into public/
+    copy_static_to_public("static", "public")
 
 if __name__ == "__main__":
     main()
